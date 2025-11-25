@@ -1,0 +1,267 @@
+.centralizar-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); 
+    padding: 20px;
+}
+
+
+.form-box {
+    background: #ffffff;
+    width: 90%;
+    max-width: 420px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    color: #820ad1;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ebe6f5;
+    transition: 0.2s;
+    margin-bottom: 15px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #820ad1;
+    box-shadow: 0 0 0 0.15rem rgba(130, 10, 209, 0.3);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #4a4a4a;
+    margin-bottom: 5px;
+}
+
+button[type="submit"],
+.btn-primary {
+    background: #820ad1 !important;
+    border: none !important;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(130, 10, 209, 0.3);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button[type="submit"]:hover,
+.btn-primary:hover {
+    background: #9c42ff !important;
+}
+
+.botao-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.botao-container button {
+    flex: 1;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.header-nu {
+    width: 100%;
+    background: #820ad1;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    border-radius: 0;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.usuario-nome {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btn-registrar {
+    background-color: #820ad1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-registrar:hover {
+    background-color: #9e42ff;
+}
+
+.sair {
+    background: none;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sair:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+@media (max-width: 900px) {
+
+    .form-box {
+        max-width: 400px;
+    }
+
+    .centralizar-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .header-left .usuario-nome {
+        font-size: 18px;
+    }
+
+    .btn-registrar {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .sair {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .form-box {
+        max-width: 350px;
+    }
+
+    .form-control,
+    .form-select {
+        font-size: 15px;
+        padding: 9px;
+    }
+}
+@media (max-width: 520px) {
+
+    .header-nu {
+        flex-direction: row; /* Mantém na mesma linha */
+        gap: 5px;
+        text-align: center;
+        padding: 10px 12px; /* Mais compacto */
+    }
+
+    .header-left .usuario-nome {
+        font-size: 16px; /* Fonte menor */
+    }
+
+    .header-right {
+        gap: 6px;
+        justify-content: center;
+    }
+
+    .btn-registrar {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    .sair {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+
+    .centralizar-form {
+        padding: 20px 10px;
+        min-height: auto;
+    }
+
+    .form-box {
+        width: 80%;
+        padding: 20px 15px;
+        max-width: 380px;
+    }
+
+    h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .botao-container {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .botao-container button {
+        width: 100%;
+    }
+
+    .form-control,
+    .form-select {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+
+@media (max-width: 380px) {
+
+    .usuario-nome {
+        font-size: 16px;
+    }
+
+    .btn-registrar {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+
+    .form-box {
+        padding: 15px;
+    }
+
+    .form-control,
+    .form-select {
+        font-size: 13px;
+        padding: 7px;
+    }
+}

@@ -1,0 +1,319 @@
+body {
+    margin: 0;
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.header-nu {
+    background: #820ad1;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.usuario-nome {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btn-registrar,
+.sair {
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-registrar {
+    background: #820ad1;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-registrar:hover {
+    background: #9e42ff;
+}
+
+.sair {
+    background: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.sair:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.saldo-principal-card,
+.card-nu {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.saldo-principal-card {
+    margin: 20px;
+    padding: 20px;
+}
+
+.value-grande {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cards-row {
+    display: flex;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.card-nu {
+    flex: 1;
+    padding: 15px;
+}
+
+.card-entrada {
+    border-left: 6px solid #00c853;
+}
+
+.card-saida {
+    border-left: 6px solid #d50000;
+}
+
+.transacoes-container {
+    margin: 20px;
+}
+
+.trans-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+.filtros-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.filtro-select {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+.trans-header,
+.trans-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px 15px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+    gap: 5px;
+    font-size: 14px;
+}
+
+.trans-list {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    background: #fff;
+    border-radius: 8px;
+    display: grid;
+    gap: 10px;
+}
+
+.trans-item {
+    align-items: center;
+    border-left: 5px solid transparent;
+}
+
+.trans-item.entrada {
+    border-left-color: #00c853;
+}
+
+.trans-item.saida {
+    border-left-color: #d50000;
+}
+
+.trans-item .valor {
+    font-weight: bold;
+}
+
+.trans-item.entrada .valor {
+    color: #28a745;
+}
+
+.trans-item.saida .valor {
+    color: #dc3545;
+}
+
+.trans-item span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.acoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.acoes button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.editar {
+    color: #2962ff;
+}
+
+.excluir {
+    color: #d50000;
+}
+
+.title {
+    display: flex;
+    margin-left: 20px;
+}
+
+@media (max-width: 900px) {
+    .cards-row {
+        flex-direction: column;
+    }
+
+    .filtros-container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 700px) {
+    .header-left .usuario-nome {
+        font-size: 18px;
+    }
+
+    .btn-registrar,
+    .sair {
+        font-size: 14px;
+    }
+
+    .btn-registrar {
+        padding: 8px 14px;
+    }
+
+    .trans-header,
+    .trans-item {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        font-size: 13px;
+    }
+}
+@media (max-width: 520px) {
+
+    /* --- HEADER SEM QUEBRAR LINHA --- */
+    .header-nu {
+        flex-direction: row; /* Mantém tudo na mesma linha */
+        gap: 5px;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .header-left .usuario-nome {
+        font-size: 16px; /* Reduz fonte para caber */
+    }
+
+    .btn-registrar {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .sair {
+        font-size: 13px;
+        padding: 5px 8px;
+    }
+
+    .header-right {
+        gap: 6px;
+        justify-content: center;
+    }
+
+    /* --- CARDS / RESTO --- */
+    .cards-row {
+        padding: 0 10px;
+        flex-direction: column;
+    }
+
+    .saldo-principal-card {
+        margin: 15px 10px;
+        padding: 15px;
+    }
+
+    .filtros-container {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+
+    .filtro-select {
+        width: 100%;
+    }
+
+    .trans-header,
+    .trans-item {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "categoria valor"
+            "data data";
+    }
+
+    .trans-header .categoria,
+    .trans-item span:nth-child(1) {
+        grid-area: categoria;
+    }
+
+    .trans-header .valor,
+    .trans-item span:nth-child(2) {
+        grid-area: valor;
+    }
+
+    .trans-header .data,
+    .trans-item span:nth-child(3) {
+        grid-area: data;
+    }
+}
+
+
+@media (max-width: 380px) {
+    .usuario-nome {
+        font-size: 16px;
+    }
+
+    .btn-registrar {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+
+    .trans-item {
+        padding: 10px;
+        font-size: 12px;
+    }
+}

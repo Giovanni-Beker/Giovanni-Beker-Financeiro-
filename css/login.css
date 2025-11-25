@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  display: flex;
+  overflow: hidden;
+}
+
+
+.form-control {
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  padding: 10px 14px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 5px rgba(124, 58, 237, 0.4);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.toggle {
+  color: #7c3aed;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+
+
+.min-vw-50 {
+  min-width: 50vw;
+}
+
+.card {
+  width: 400px;
+}
+
+@media (max-width: 999px) {
+
+  .img {
+    display: none;
+  }
+
+  .min-vw-50 {
+    display: none;
+  }
+
+
+}

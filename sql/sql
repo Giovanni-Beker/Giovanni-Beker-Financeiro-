@@ -1,0 +1,34 @@
+create table public.transactionsc (
+  id uuid not null default gen_random_uuid() primary key,
+  user_id uuid not null references auth.users(id) on delete cascade,
+
+  amount numeric not null,
+  type text not null check (type in ('entrada', 'saida')),
+  category text,
+  description text,
+
+  created_at timestamp with time zone default now()
+);
+
+
+create policy "Users can view their own transactions"
+on transactions
+for select
+using ( auth.uid() = user_id );
+ 
+create policy "Users can insert their own transactions"
+on transactions
+for insert
+with check ( auth.uid() = user_id );
+
+create policy "Users can update their own transactions"
+on transactions
+for update
+using ( auth.uid() = user_id );
+
+create policy "Users can delete their own transactions"
+on transactions
+for delete
+using ( auth.uid() = user_id );
+
+
