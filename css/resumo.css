@@ -229,16 +229,15 @@ body {
 }
 @media (max-width: 520px) {
 
-    /* --- HEADER SEM QUEBRAR LINHA --- */
     .header-nu {
-        flex-direction: row; /* Mantém tudo na mesma linha */
+        flex-direction: row; 
         gap: 5px;
         text-align: center;
         padding: 12px;
     }
 
     .header-left .usuario-nome {
-        font-size: 16px; /* Reduz fonte para caber */
+        font-size: 16px; 
     }
 
     .btn-registrar {
@@ -256,7 +255,6 @@ body {
         justify-content: center;
     }
 
-    /* --- CARDS / RESTO --- */
     .cards-row {
         padding: 0 10px;
         flex-direction: column;

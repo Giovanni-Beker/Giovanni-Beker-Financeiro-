@@ -185,14 +185,14 @@ input[type=number] {
 @media (max-width: 520px) {
 
     .header-nu {
-        flex-direction: row; /* Mantém na mesma linha */
+        flex-direction: row; 
         gap: 5px;
         text-align: center;
-        padding: 10px 12px; /* Mais compacto */
+        padding: 10px 12px; 
     }
 
     .header-left .usuario-nome {
-        font-size: 16px; /* Fonte menor */
+        font-size: 16px; 
     }
 
     .header-right {
